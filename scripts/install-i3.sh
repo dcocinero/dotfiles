@@ -37,4 +37,10 @@ else
   echo "[❌] Stopping script. Bye. "
   exit 0
 fi
+
+if ! [ -d "$HOME/Pictures" ]; then
+  mkdir "$HOME/Pictures"
+fi
+
+cp "$(pwd)/wallpapers/*" "$HOME/Pictures"
 echo "[✅] - Finished..."
