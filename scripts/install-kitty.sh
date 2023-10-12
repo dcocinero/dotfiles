@@ -57,14 +57,14 @@ if [[ $back1 = "y" || $back1 == "Y" ]]; then
   if [[ -e "$HOME/.zshrc" ]]; then
     mv "$HOME/.zshrc" "$config_file/config-backup/.zshrcbak"
   fi
-  cp -r "$(pwd)/.zshrc" "$HOME/"
+  cp "$(pwd)/.zshrc" "$HOME/"
 
   if [[ -e "$HOME/.p10k.zsh" ]]; then
     mv "$HOME/.p10k.zsh" "$config_file/config-backup/.p10kbak"
   fi
   mv "$HOME/.p10k.zsh" "$config_file/config-backup/.p10kbak"
   cp "$(pwd)/.p10k.zsh" "$HOME/"
-  
+
 else
   echo "[❌] Stopping script. Bye. "
   exit 0

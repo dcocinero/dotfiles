@@ -33,7 +33,7 @@ read -r back2
 
 if [[ $back2 = "y" || $back2 == "Y" ]]; then
   verify_dir "i3"
-  cp "$(pwd)/dots/i3"  "$config_file"
+  cp -r "$(pwd)/dots/i3"  "$config_file"
 else
   echo "[❌] Stopping script. Bye. "
   exit 0
