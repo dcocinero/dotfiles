@@ -3,7 +3,13 @@
 
 case $1 in
     ubuntu | debian | kali)
-      sudo apt install awesome-terminal-fonts ttf-ubuntu-mono-nerd
+      git clone "https://github.com/gabrielelana/awesome-terminal-fonts.git" 
+      bash "$(pwd)/awesome-terminal-fonts/install.sh"
+      rm -rf "awesome-terminal-fonts"
+
+      curl -OL https://github.com/ryanoasis/nerd-fonts/lastest/releases/download/UbuntuMono.tar.xz
+      tar -xvf UbuntuMono.tar.xz -C "$(pwd)/fonts/"
+      rm -rf "UbuntuMono".tar.xz" 
     ;;
     arch)
       sudo pacman -S awesome-terminal-fonts ttf-ubuntu-mono-nerd

@@ -52,14 +52,14 @@ if [[ $back1 = "y" || $back1 == "Y" ]]; then
   verify_dir "kitty"
   cp -r "$(pwd)/dots/kitty"  "$config_file"
   verify_dir "powerlevel10k"
-  cp -r "$(pwd)/dots/powerlevel10k" "$config_file"
+  git clone --depth=1 "https://github.com/romkatv/powerlevel10k.git" "$config_file"
 
-  if [[ -e "$HOME/.zshrc" ]]; then
+  if [[ -f "$HOME/.zshrc" ]]; then
     mv "$HOME/.zshrc" "$config_file/config-backup/.zshrcbak"
   fi
   cp "$(pwd)/.zshrc" "$HOME/"
 
-  if [[ -e "$HOME/.p10k.zsh" ]]; then
+  if [[ -f "$HOME/.p10k.zsh" ]]; then
     mv "$HOME/.p10k.zsh" "$config_file/config-backup/.p10kbak"
   fi
   mv "$HOME/.p10k.zsh" "$config_file/config-backup/.p10kbak"
