@@ -7,8 +7,8 @@ case $1 in
       bash "$(pwd)/awesome-terminal-fonts/install.sh"
       rm -rf "awesome-terminal-fonts"
 
-      curl -OL https://github.com/ryanoasis/nerd-fonts/lastest/releases/download/UbuntuMono.tar.xz
-      tar -xvf UbuntuMono.tar.xz -C "$(pwd)/fonts/"
+      curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/UbuntuMono.tar.xz
+      tar -xvf "UbuntuMono.tar.xz" -C "$(pwd)/fonts/"
       rm -rf "UbuntuMono.tar.xz" 
     ;;
     arch)
