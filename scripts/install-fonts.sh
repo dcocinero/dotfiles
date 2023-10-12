@@ -19,4 +19,4 @@ if ! [ -d "$FONT_DIR" ]; then
   mkdir -p "$FONT_DIR"
 fi
 
-cp "$(pwd)/fonts/*"  "$FONT_DIR"
+cp -r "$(pwd)/fonts"/*  "$FONT_DIR"

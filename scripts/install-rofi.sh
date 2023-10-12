@@ -50,7 +50,7 @@ read -r back3
 
 if [[ $back3 = "y" || $back3 == "Y" ]]; then
   verify_dir "rofi"
-  cp "$(pwd)/dots/rofi"  "$config_file/rofi"
+  cp -r "$(pwd)/dots/rofi"  "$config_file"
 else
   echo "[❌] Stopping script. Bye. "
   exit 0

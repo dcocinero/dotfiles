@@ -50,13 +50,21 @@ read -r back1
 
 if [[ $back1 = "y" || $back1 == "Y" ]]; then
   verify_dir "kitty"
-  cp "$(pwd)/dots/kitty"  "$config_file/kitty"
+  cp -r "$(pwd)/dots/kitty"  "$config_file"
   verify_dir "powerlevel10k"
-  cp "$(pwd)/dots/powerlevel10k" "$config_file/powerlevel10k"
-  mv "$HOME/.zshrc" "$config_file/config-backup/.zshrcbak"
-  cp "$(pwd)/.zshrc" "$HOME/"
+  cp -r "$(pwd)/dots/powerlevel10k" "$config_file"
+
+  if [[ -e "$HOME/.zshrc" ]]; then
+    mv "$HOME/.zshrc" "$config_file/config-backup/.zshrcbak"
+  fi
+  cp -r "$(pwd)/.zshrc" "$HOME/"
+
+  if [[ -e "$HOME/.p10k.zsh" ]]; then
+    mv "$HOME/.p10k.zsh" "$config_file/config-backup/.p10kbak"
+  fi
   mv "$HOME/.p10k.zsh" "$config_file/config-backup/.p10kbak"
   cp "$(pwd)/.p10k.zsh" "$HOME/"
+  
 else
   echo "[❌] Stopping script. Bye. "
   exit 0

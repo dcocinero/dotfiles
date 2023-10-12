@@ -33,7 +33,7 @@ read -r back2
 
 if [[ $back2 = "y" || $back2 == "Y" ]]; then
   verify_dir "i3"
-  cp "$(pwd)/dots/i3"  "$config_file/i3"
+  cp "$(pwd)/dots/i3"  "$config_file"
 else
   echo "[❌] Stopping script. Bye. "
   exit 0
@@ -43,5 +43,5 @@ if ! [ -d "$HOME/Pictures" ]; then
   mkdir "$HOME/Pictures"
 fi
 
-cp "$(pwd)/wallpapers/*" "$HOME/Pictures"
+cp "$(pwd)/wallpapers"/* "$HOME/Pictures"
 echo "[✅] - Finished..."

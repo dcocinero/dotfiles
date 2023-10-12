@@ -48,7 +48,7 @@ read -r removee
 
 if [[ $removee = "y" || $removee == "Y" ]]; then
   verify_dir "polybar"
-  cp "$(pwd)/dots/polybar"  "$config_file/polybar"
+  cp -r "$(pwd)/dots/polybar"  "$config_file"
 else
   echo "[❌] Stopping script. Bye. "
   exit 0

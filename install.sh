@@ -108,7 +108,7 @@ if [[ $isRofi = "y" || $isRofi == "Y" ]]; then
   echo "rofi: $(which rofi)"
 fi
 
-sh "$(pwd)/scripts/install-fonts.sh" "$ID"
+bash "$(pwd)/scripts/install-fonts.sh" "$ID"
 
 echo "[✅] - Installation done."
 echo "   Restart your pc!"
