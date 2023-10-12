@@ -1,3 +1,4 @@
+#!/bin/bash
 config_file="$HOME/.config"
 
 if ! [ -d "$config_file/config-backcup" ]; then

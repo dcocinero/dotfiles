@@ -37,10 +37,10 @@ esac
 if [[ $isi3 = "y" || $isi3 == "Y" ]]; then
   case $ID in
     ubuntu | debian | kali)
-      sh "$(pwd)/scripts/install-i3.sh $ID"
+      bash "$(pwd)/scripts/install-i3.sh $ID"
     ;;
     arch)
-      sh "$(pwd)/scripts/install-i3.sh $ID"
+      bash "$(pwd)/scripts/install-i3.sh $ID"
     ;;
     *)
       echo "[❌] - Unsupported OS"
@@ -51,10 +51,10 @@ fi
 if [[ $isPolybar = "y" || $isPolybar == "Y" ]]; then
   case $ID in
     ubuntu | debian | kali)
-      sh "$(pwd)/scripts/install-polybar.sh $ID"
+      bash "$(pwd)/scripts/install-polybar.sh $ID"
     ;;
     arch)
-      sh "$(pwd)/scripts/install-polybar.sh $ID"
+      bash "$(pwd)/scripts/install-polybar.sh $ID"
     ;;
     *)
       echo "[❌] - Unsupported OS"
@@ -65,10 +65,10 @@ fi
 if [[ $isKitty = "y" || $isKitty == "Y" ]]; then
   case $ID in
     ubuntu | debian | kali)
-      sh "$(pwd)/scripts/install-kitty.sh $ID"
+      bash "$(pwd)/scripts/install-kitty.sh $ID"
     ;;
     arch)
-      sh "$(pwd)/scripts/install-kitty.sh $ID"
+      bash "$(pwd)/scripts/install-kitty.sh $ID"
     ;;
     *)
       echo "[❌] - Unsupported OS"
@@ -79,10 +79,10 @@ fi
 if [[ $isRofi = "y" || $isRofi == "Y" ]]; then
   case $ID in
     ubuntu | debian | kali)
-      sh "$(pwd)/scripts/install-rofi.sh $ID"
+      bash "$(pwd)/scripts/install-rofi.sh $ID"
     ;;
     arch)
-      sh "$(pwd)/scripts/install-rofi.sh $ID"
+      bash "$(pwd)/scripts/install-rofi.sh $ID"
     ;;
     *)
       echo "[❌] - Unsupported OS"
