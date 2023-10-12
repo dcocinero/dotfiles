@@ -7,7 +7,7 @@ fi
 
 verify_dir(){
   if [ -d "$config_file/$1" ]; then
-    mv "$config_file/$1" "$config_file/config-backup/${1}bak"
+    mv "$config_file/$1" "$config_file/config-backup/"
   fi
 }
 
@@ -55,14 +55,13 @@ if [[ $back1 = "y" || $back1 == "Y" ]]; then
   git clone --depth=1 "https://github.com/romkatv/powerlevel10k.git" "$config_file"
 
   if [[ -f "$HOME/.zshrc" ]]; then
-    mv "$HOME/.zshrc" "$config_file/config-backup/.zshrcbak"
+    mv "$HOME/.zshrc" "$config_file/config-backup/"
   fi
   cp "$(pwd)/.zshrc" "$HOME/"
 
   if [[ -f "$HOME/.p10k.zsh" ]]; then
-    mv "$HOME/.p10k.zsh" "$config_file/config-backup/.p10kbak"
+    mv "$HOME/.p10k.zsh" "$config_file/config-backup/"
   fi
-  mv "$HOME/.p10k.zsh" "$config_file/config-backup/.p10kbak"
   cp "$(pwd)/.p10k.zsh" "$HOME/"
 
 else

@@ -8,7 +8,7 @@ case $1 in
       rm -rf "awesome-terminal-fonts"
 
       curl -OL https://github.com/ryanoasis/nerd-fonts/lastest/releases/download/UbuntuMono.tar.xz
-      tar -xvf UbuntuMono.tar.xz -C "$(pwd)/fonts/"
+      tar -xvf "UbuntuMono.tar.xz -C "$(pwd)/fonts/"
       rm -rf "UbuntuMono".tar.xz" 
     ;;
     arch)

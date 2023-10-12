@@ -7,7 +7,7 @@ fi
 
 verify_dir(){
   if [ -d "$config_file/$1" ]; then
-    mv "$config_file/$1" "$config_file/config-backup/${1}bak"
+    mv "$config_file/$1" "$config_file/config-backup/"
   fi
 }
 
