@@ -52,7 +52,8 @@ if [[ $back1 = "y" || $back1 == "Y" ]]; then
   verify_dir "kitty"
   cp -r "$(pwd)/dots/kitty"  "$config_file"
   verify_dir "powerlevel10k"
-  git clone --depth=1 "https://github.com/romkatv/powerlevel10k.git" "$config_file"
+  git clone --depth=1 "https://github.com/romkatv/powerlevel10k.git"
+  mv "powerlevel10k" "$config_file/"
 
   if [[ -f "$HOME/.zshrc" ]]; then
     mv "$HOME/.zshrc" "$config_file/config-backup/"
